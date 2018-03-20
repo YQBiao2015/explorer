@@ -7,4 +7,5 @@ import com.company.explorer.auth.entity.AuUser;
  */
 public interface IAuUserService {
     AuUser get(Integer id);
+    AuUser getByUserName(String userName);
 }

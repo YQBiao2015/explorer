@@ -2,7 +2,6 @@ package com.company.explorer.auth.serivce.impl;
 
 import com.company.explorer.auth.dao.IAuUserDao;
 import com.company.explorer.auth.entity.AuUser;
-import com.company.explorer.auth.repository.AuUserRepository;
 import com.company.explorer.auth.serivce.IAuUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +19,11 @@ public class AuUserService implements IAuUserService {
     @Override
     public AuUser get(Integer id) {
         return auUserDao.get(id);
+    }
+
+    @Override
+    public AuUser getByUserName(String userName) {
+        return auUserDao.getByUserName(userName);
     }
 
 }
